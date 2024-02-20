@@ -11,7 +11,7 @@ Transfers data between Logisim and host system through a socket.
 
 ## Installing
 
-+ Download jar file
++ Download jar file from [latest release](https://github.com/cdm-processors/logisim-uart/releases/latest)
 + In Logisim, `Project > Load Library > JAR Library`
 + Then you get new library `Network I/O` with `UART` component
 
@@ -71,6 +71,8 @@ _Note that you need to handle Telnet control messages yourself._
 
 ### As a plain socket
 This library doesn't really enforce any protocol, so you can connect to instance just like to regular socket and transfer binary data.
+
+For example, you can use `netcat` to send some data from terminal. Another way is to write a program in your favorite language that connects to socket.
 
 ### Connecting multiple instances together
 Socket opened by `UART` instance acts as a **server**, so it can't directly connect to other sockets.
